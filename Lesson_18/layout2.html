@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>layout2</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./layout2.css" rel="stylesheet">
+    </head>
+    <body>
+      <!-- 강의 19 -->
+      <!-- display:flex쓰면 박스의 가로 배치가 쉬워짐 -->
+      <nav class="flex-container">
+        <div class="flex-item" >wellcome</div>
+        <div class="flex-item" style="flex-grow: 2;"></div>
+        <div class="flex-item">product</div>
+        <div class="flex-item">Service</div>
+        <div class="flex-item">Service</div>
+        <div class="flex-item">Service</div>
+      </nav>
+
+      <ul class="list" draggable="none">
+        <li class="tab-button" id="tab-btn0"><img src="./img/aka_btn.jpg"></li>            
+        <li class="tab-button" id="tab_btn1">Brand-Home</li>
+        <li class="tab-button " id="tab_btn2">Man-shoes</li>
+        <li class="tab-button" id="tab_btn3">Woman-shoes</li>
+        <li class="tab-button" id="tab_btn3">All-shoes</li>
+
+        <li class="tab-button" style="float: right;"><a href="#" >Login</a></li>
+        <li class="tab-button" style="float: right;"><a href="#" >Join</a></li>
+        <li class="tab-button" style="float: right;"><a href="#" >Cart</a></li>
+      </ul>
+        <!--tab버튼 요소-->
+        <div class="tab-content">
+            
+        </div>
+         <div class="tab-content">
+         
+        </div>
+        <div class="tab-content">
+           
+        </div>
+            </div> 
+        </div>
+    </div>
+      <div class="main-background">
+        <h3 class="main-title"> Hello Happy New Year </h3>
+            <h4 class="main-year"> 2024 </h4>
+            <p style="margin-bottom: 5px;"> UP TO 70% OFF </p>
+            <p style="margin-top: 5px;"> 2024.01.01 ~ 2024.01.07</p>
+      </div>
+      <div class="container">
+        <button>~30% OFF </button>
+        <button>~40% OFF </button>
+        <button>~50% OFF </button>
+        <button>~60% OFF </button>
+      </div>
+
+      <div class="form-background">
+        <div class="form-white">
+          <form> 
+          <div class="w-100">            
+            <h3>Contact Us</h3>
+            <p type="email">Your email</p>
+            <input class="form-input" type="email" placeholder="email@example.com">
+          </div> 
+            
+          <div class="w-50">
+            <p>First Name</p>
+            <input class="form-input" type="text">
+            </div>
+            <div class="w-50">
+              <p>Last Name</p>
+              <input class="form-input" type="text">
+            </div>
+            <div style="clear: both;"></div>
+            
+            <div>
+              <p>Message</p>
+              <textarea class="form-input form-long"></textarea>
+            </div>
+
+            <div>
+              <!--  label의 for을 통해  - id 를 똑같이 맞추면 input을 누른걸로 간주 -->
+              <label for="sub"><input type="checkbox" id="sub"> Subscript</label>
+              <button class="yellow-button">SEND</button>
+            </div>
+          </form>
+          
+        </div>
+      </div>
+        
+        <!-- <input type="text" > -->
+        <!-- ctrl+spacebar로 자동완성으로 추천 -->
+        <!-- <input type="password" value="미리채운값"> -->
+        <!-- <input type="eamil" placeholder="배경글자"> -->
+        <!-- <input type="date" name="age"> 서버에 어떤 인풋인지 지정해서 전달 -->
+        <!-- <input type="checkbox"> -->
+        <!-- <input type="radio"> -->
+      <!-- </form> -->
+      <!-- select 을 선택할 수 있는 폼  -->
+      <!-- <select> -->
+        <!-- <option>adfafssf</option> -->
+        <!-- <option>adfafssf</option> -->
+        <!-- <option>adfafssf</option> -->
+      <!-- </select> -->
+      <!-- <br> 줄바꿈 태그 -->
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

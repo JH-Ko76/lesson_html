@@ -1,0 +1,80 @@
+table{
+   border-collapse: collapse;
+   border-spacing: 15px; 
+   border-radius: 5px;
+   border-color: black;
+   width: 100%;
+}
+tr{
+    border-collapse: collapse;
+    border: 1px solid rgb(113, 180, 247);
+   
+}
+th{
+    vertical-align:middle;
+    text-align: center;
+    color: dodgerblue;
+}
+td{
+    vertical-align:middle;
+    text-align: center;
+    color: dodgerblue;
+}
+p{
+    margin: 5px;
+    color: dodgerblue;
+}
+/* 메인배경 */
+.blue-frame{
+    width: 100%;
+    background-color: #c2d3de ;
+    padding: 30px;
+}
+/* 서브배경 */
+.white-frame{
+    background-color: white;
+    width: 100%;
+    border-radius: 5px black;
+    border: 2px solid black;
+}
+/* 장바구니 타이틀 */
+.title{
+    color: rgb(12, 30, 168);
+}
+/* item 브랜드/ 설명 div */
+.item_explan{
+    margin-top:20px;
+    display: inline-block;
+    text-align: left;
+}
+/* 비율이 유지되는 이유 여기가 600px이라 */
+/* item view 비율 */
+.main-view{
+    width: 600px;
+}
+/* item 브랜드 텍스트 */
+.brand{
+font-weight: bold;
+color: black;
+}
+/* 총합 지불액 */
+.total_price{
+    color: darkblue;
+    font-weight: bold;
+}
+/* 구매버튼 */
+.pay_btn{
+    float:right;
+    display: inline-block;
+    width: 300px;
+    background-color: darkblue;
+    height: 50px;
+    color: white;
+    margin-top: 10px;
+}
+/* 링크 버튼 */
+.edit_cart{
+    margin-top: 20px; 
+    width: 200px; 
+    display: inline-block;
+}

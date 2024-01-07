@@ -1,0 +1,15 @@
+이미지 정렬
+https://www.freecodecamp.org/korean/news/how-to-center-an-image-in-css/
+
+글자 사이 간격
+https://www.codingfactory.net/10463
+셀 병합
+https://hianna.tistory.com/442
+텍스트 정렬
+https://coding-factory.tistory.com/909
+tr에 border를 넣기
+https://roqkfrhdqngkwk.tistory.com/28
+유료화 단위 표시
+https://dk-projects.tistory.com/42
+border 스타일 종류
+https://investechnews.com/css-%ED%85%8C%EB%91%90%EB%A6%AC-%EC%A2%85%EB%A5%98%EC%99%80-%EB%AA%85%EB%A0%B9border-style-%EC%86%8D%EC%84%B1/
