@@ -103,23 +103,99 @@ a:visited {
     color:white; 
     text-decoration: none;
 }
+/* 모달창을 숨김 */
+.Support_box{
+width: 500px;
+background: white;
+clear: both;
+border: 2px solid black;
+}
+.modal-title{
+  padding: 20px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+input[type=email]{
+  padding: 5px;
+  width: 75%;
+  margin-left: 60px;
+  border-radius: 5px;
+}
+h5{
+  padding-left: 60px;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+.name_input{
+  display: inline-block;
+  margin-left: 60px;
+  width: 100%;
+  border-radius: 5px;
+}
+.name_title{
+  width: 100%;
+}
+.Support_Text{
+  width: 75%;
+  height: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+.Check_Send{
+  padding: 20px;
+}
+.Support_Send_Btn{
+  float: right;
+  width: 130px;
+  height: 30px;
+  margin-right: 30px;
+  font-weight: bold;
+  color: white;
+  background-color: rgb(229, 178, 13);
+  border: none;
+}
+.sub_btn{
+  margin-left: 40px;
+}
+
+/* 
 .box{
     position: relative;
     width: 80%;
-    /* 최대 폭을 지정하는 옵션 */
-    /* width는 content 영역의 너비를 의미 즉 컨텐트 밖에는 패딩 보더 영역이 더 있음 */
+    최대 폭을 지정하는 옵션 
+    width는 content 영역의 너비를 의미 즉 컨텐트 밖에는 패딩 보더 영역이 더 있음 
     max-width: 600px;
     margin: auto;
     padding: 20px;
     text-align: center;
     background: aqua;
     top: 50px;
-    /* boder 영역 및 padding 영역까지 width를 포함시키는 옵션 */
-    box-sizing: border-box;
-    /* content-box : 기본 widtrh  */
-    /* 반응형(모바일)에서 수치는 %로 자주 사용 */
-}
 
+    boder 영역 및 padding 영역까지 width를 포함시키는 옵션 
+    box-sizing: border-box;
+    content-box : 기본 widtrh  
+    반응형(모바일)에서 수치는 %로 자주 사용
+}
+*/
+
+.text-input{
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+/* 
+이렇게하면 text 속성의 input만 css가 적용됨 
+input[type=text]{
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+ */
 /* .explain-box{
     
     position: relative;

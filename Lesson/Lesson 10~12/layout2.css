@@ -1,0 +1,200 @@
+div,input,textarea{
+  box-sizing: border-box;
+}
+.main-background{
+    clear: both;
+    width:100%;
+    height: 500px;
+    /* 배경을 여러개 겹쳐서 넣을 때 다음과 같이 명시 */
+    /* background-image: url(../img/shoes.jpeg), url(../img/wow.jpg); */
+    background-image: url(./img/backlayout.jpg);
+    /* background size 조정 */
+    /* background-size: 100%; */
+    /* cover option : 배경이 잘려도 괜찮으니 빈공간 없이 배경을 꽉차게 만듬  */
+    background-size: cover;
+    /* div박스가 여백이 있어도 상관없이 짤리지만 않게 */
+    /* background-size: contain; */
+    /* 배경은 꽉차지 않으면 반복됨 그걸 조정하는 옵션 */
+    background-repeat: no-repeat;
+    /* no -repeat 반복되지 않음  */
+    /* 배경이 시작할 위치 지정  */
+    background-position: center;
+    /* 스크롤 시 배경의위치 조정 (fixed : 고정) */
+    /* background-attachment: fixed; */
+    /* 필터 옵션은 사진을 보정해줌 (밝기, 블러 등) 배경안에 있는 글씨에도 적용됨 */
+    /* filter: blur(10%); */
+    padding: 1px;
+    text-align: center;
+    color:red;
+    font-size:20px;
+    font-weight: bold;
+}
+.main-title{
+    color: black;
+    font-size: 40px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-year{
+    color: black;
+    font-size: 40px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ul.list {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    border-bottom: 1px solid #ccc;
+    background-color: black;
+}
+  ul.list::after {
+    content: '';
+    text-align: center; 
+    display: block;
+    clear: both;
+}
+  .tab-button {
+    padding: 10px 20px 10px 20px;
+    float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: white;
+    cursor: pointer;
+    line-height: 60px;
+  }
+.container{
+  float: left;
+  display: block;
+  padding: 10px;
+  /* position 속성이 있으면 좌표 이동가능 
+  relative : 해당 요소의 원래 위치 기준으로 좌표이동 하는 옵션 
+  static : 좌표이동이 안되도록 하는 옵션
+  fixed : 화면 고정이 되도록 하는 옵션 
+  absolute : 부모를 기점으로 움직이는 옵션
+  position: relative; 
+  top:100px;
+  left: 100px;
+  right:100px;
+*/
+}
+button{
+    width: 150px;
+    height: 40px;
+    background: white;
+    color:gray;
+    /* 버튼의 테두리를 없애는 옵션 */
+    /* border: none; */
+    /* 버튼을 둥글게 만든다. */
+    border-radius: 5px;
+}
+/* 링크 색상 설정 */
+a:link {
+    color : white;
+    text-decoration: none;
+  }
+/* 클릭 후 방문했을 때 색상 설정 */
+a:visited { 
+    color:white; 
+    text-decoration: none;
+}
+.form-background{
+  background-color: black;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+}
+.form-white{
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+.form-input{
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  border:1px solid black;
+  border-radius: 5px;
+}
+.w-50{
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+.w-100{
+  width: 100%;
+  padding: 10px;
+}
+.form-long{
+  width: 100%;
+}
+.yellow-button{
+  padding: 10px;
+  width: 30px;
+  display: block;
+  margin: auto;
+  float: right;
+}
+
+
+/* 
+.box{
+    position: relative;
+    width: 80%;
+     최대 폭을 지정하는 옵션 
+     width는 content 영역의 너비를 의미 즉 컨텐트 밖에는 패딩 보더 영역이 더 있음 
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: aqua;
+    top: 50px;
+     boder 영역 및 padding 영역까지 width를 포함시키는 옵션 
+    box-sizing: border-box;
+     content-box : 기본 widtrh  
+    반응형(모바일)에서 수치는 %로 자주 사용 
+}
+.text-input{
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+
+이렇게하면 text 속성의 input만 css가 적용됨 
+input[type=text]{
+  padding: 20px;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 5px;
+}
+ 
+ .explain-box{
+    
+    position: relative;
+    background: gray;
+    width: 500px;
+    height: 200px;
+    top:-50px;
+    left: 400px;
+}
+normalize.css 
+브라우저 마다 디자인이 상이할 수 있어서 
+그런것들을 호환되게 정리한 css 
+
+
+숙제 제목밑에 이쁘게 글 버튼 넣기url  
+div h4 박스 두개가 겹치면 위쪽 테두리가 
+그런 요소의 경우는 두개의 요소가 마진이 하나로 쳐짐 
+그래서 h4에 적용한 마진이 배경에도 적용됨 
+그런경우는 서로 테두리를 분리해줘야함 
+*/

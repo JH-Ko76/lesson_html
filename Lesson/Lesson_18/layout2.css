@@ -1,0 +1,215 @@
+/* 
+Lesson 18 목표
+web 폰트 넣는법 
+용량 줄이기 
+호환성 잡기
+트래픽 절약 
+하는 방법
+*/
+
+
+/* 
+font-face
+내가 준비한 폰트파일을 
+CSS에서 사용할 수 있도록 등록하는 과정
+웹용 폰트로 만들어진 파일이 woff 파일 (용량최적화) 
+
+폰트를 따로 찾기 힘들다면
+google font를 이용하는 것도 하나의 방법
+폰트파일을 구글폰트에서 호스팅해주므로
+링크 태그를 그대로 집어넣거나 
+css파일에 import 형식으로 넣으면됨 
+
+*/
+
+@font-face{
+  font-family : '나눔스퀘어';
+  font-weight: 800px;
+  src : url(./font/NanumSquareAcB.woff);
+}
+.flex-container{
+  /* display: flex : inline + table요소를 합친 형태 
+    따라서 width를 100%로 해도 안의 요소가 전부 차지하지 않음
+
+  */
+  /* 부모요소에 display:flex를 주면 자동으로 가로배치가 완료됨 */
+  display: flex;
+  /* 
+  가운데 정렬 : justify-content: center;
+  우측정렬 :  justify-content: flex-end;
+  좌측정렬 :  justify-content: flex-start;
+  한칸 씩 띄워서 배치 :  justify-content:space-between;
+  세로배치 : flex-direction: column;
+  가로배치(기본): flex-direction: row;
+  상하정렬 align-items: center;
+  html에서 박스 크기 설정가능 (비율) :flex-grow: 2;
+  */
+  align-items: center;
+  height: 50px;
+  background-color: coral;
+  padding: 10px;
+}
+.flex-item{
+  background-color: coral;
+  margin-right: 15px;
+}
+
+body{
+  margin:0px;
+  /* font-weight: 900px; 로 그냥 굵게하면 폰트가 이상해질 수 있음 */
+  /* 그래서 따로 폰트에 직접 적용해서 쓰는게 좋다. */
+  /* 이런 형태는 보통 내 PC에 해당 폰트가 설치된 경우에 사용 */
+  /* 폰트를 넣고 싶으면 font-family */
+  /* 1.gulim채가 없으면 2. doutum채를 그것도 없으면 3번 글씨체를 적용 */
+  font-family:'나눔스퀘어';
+  /* 굴림채 외 몇몇 글씨체는 
+     글씨를 확대하면 깨진것처럼 보임
+     그러면 폰트를 부드럽게 처리해줘야함
+    하는 방법은 살짝회전시키면됨.
+  */
+}
+p,h4,h3,h2,h1,span{
+  transform: rotate(0.03deg);
+}
+div,input,textarea{
+  box-sizing: border-box;
+}
+/* ==========18~19 강의 =========== */
+.main-background{
+    clear: both;
+    width:100%;
+    height: 500px;
+    /* 배경을 여러개 겹쳐서 넣을 때 다음과 같이 명시 */
+    /* background-image: url(../img/shoes.jpeg), url(../img/wow.jpg); */
+    background-image: url(./img/backlayout.jpg);
+    /* background size 조정 */
+    /* background-size: 100%; */
+    /* cover option : 배경이 잘려도 괜찮으니 빈공간 없이 배경을 꽉차게 만듬  */
+    background-size: cover;
+    /* div박스가 여백이 있어도 상관없이 짤리지만 않게 */
+    /* background-size: contain; */
+    /* 배경은 꽉차지 않으면 반복됨 그걸 조정하는 옵션 */
+    background-repeat: no-repeat;
+    /* no -repeat 반복되지 않음  */
+    /* 배경이 시작할 위치 지정  */
+    background-position: center;
+    /* 스크롤 시 배경의위치 조정 (fixed : 고정) */
+    /* background-attachment: fixed; */
+    /* 필터 옵션은 사진을 보정해줌 (밝기, 블러 등) 배경안에 있는 글씨에도 적용됨 */
+    /* filter: blur(10%); */
+    padding: 1px;
+    text-align: center;
+    color:red;
+    font-size:20px;
+    font-weight: bold;
+}
+.main-title{
+    color: black;
+    font-size: 40px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.main-year{
+    color: black;
+    font-size: 40px;
+    margin-top: 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+ul.list {
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; 
+    border-bottom: 1px solid #ccc;
+    background-color: black;
+}
+  ul.list::after {
+    content: '';
+    text-align: center; 
+    display: block;
+    clear: both;
+}
+  .tab-button {
+    padding: 10px 20px 10px 20px;
+    float: left;
+    margin-right: -1px;
+    margin-bottom: -1px;
+    color: white;
+    cursor: pointer;
+    line-height: 60px;
+  }
+.container{
+  float: left;
+  display: block;
+  padding: 10px;
+  /* position 속성이 있으면 좌표 이동가능 
+  relative : 해당 요소의 원래 위치 기준으로 좌표이동 하는 옵션 
+  static : 좌표이동이 안되도록 하는 옵션
+  fixed : 화면 고정이 되도록 하는 옵션 
+  absolute : 부모를 기점으로 움직이는 옵션
+  position: relative; 
+  top:100px;
+  left: 100px;
+  right:100px;
+*/
+}
+
+/* 링크 색상 설정 */
+a:link {
+    color : white;
+    text-decoration: none;
+  }
+/* 클릭 후 방문했을 때 색상 설정 */
+a:visited { 
+    color:white; 
+    text-decoration: none;
+}
+.form-background{
+  background-color: black;
+  padding: 30px;
+  width: 100%;
+  height: 100%;
+  clear: both;
+}
+.form-white{
+  background-color: white;
+  padding: 30px;
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+.form-input{
+  padding: 10px;
+  width: 100%;
+  font-size: 20px;
+  border:1px solid black;
+  border-radius: 5px;
+}
+.w-50{
+  width: 100%;
+  padding: 10px;
+  float: left;
+}
+.w-100{
+  width: 100%;
+  padding: 10px;
+}
+.form-long{
+  width: 100%;
+}
+.yellow-button{
+  padding: 10px;
+  width: 100px;
+  background-color: #ffbb00;
+  color: white;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+  float: right;
+
+}

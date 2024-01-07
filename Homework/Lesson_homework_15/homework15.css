@@ -1,0 +1,55 @@
+.title{
+
+}
+.cart-table{
+   max-width: 1200px;
+   width: 100%;
+   margin: auto;
+   background: white;
+   border-radius: 10px;
+   text-align: center;
+}
+/* 메인배경 */
+.blue-frame{
+    width: 100%;
+    background-color: #c2d3de ;
+    padding: 30px;
+}
+td,th{
+/* border: 1px solid black; */
+}
+/* cart table 안에 있는 td */
+.cart-table td,th{
+    padding: 15px;
+    border-bottom: 1px solid #c2d3de;
+}
+/* cart table. 안에있는 두번째 th 선택 nth-child(1) */
+.cart-table th:nth-child(3){
+    width: 400px;
+}
+
+/* item sell 길이 지정*/
+/* 위에 한행만 조절해도 아래는 자동으로 적용됨 */
+.cell-long{
+    width: 700px;
+
+}
+/* 구매버튼 */
+.pay_btn{
+    float:right;
+    width: 300px;
+    background-color: darkblue;
+    height: 50px;
+    color: white;
+    margin-top: 10px;
+}
+/* 링크 버튼 */
+.edit_cart{
+    margin-top: 20px; 
+    width: 200px; 
+    display: inline-block;
+    margin: 20px;
+}
+.edit_div{
+
+}
