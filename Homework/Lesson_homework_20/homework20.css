@@ -1,0 +1,83 @@
+.flex-container{
+    /* display: flex : inline + table요소를 합친 형태 
+      따라서 width를 100%로 해도 안의 요소가 전부 차지하지 않음
+  
+    */
+    /* 부모요소에 display:flex를 주면 자동으로 가로배치가 완료됨 */
+    display: flex;
+    /* 
+    가운데 정렬 : justify-content: center;
+    우측정렬 :  justify-content: flex-end;
+    좌측정렬 :  justify-content: flex-start;
+    한칸 씩 띄워서 배치 :  justify-content:space-between;
+    세로배치 : flex-direction: column;
+    가로배치(기본): flex-direction: row;
+    상하정렬 align-items: center;
+    html에서 박스 크기 설정가능 (비율) :flex-grow: 2;
+    */
+    width: 100%;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    background-color: coral;
+    padding: 10px;
+  }
+  .flex-item{
+    background-color: coral;
+    width:150px;
+    height:100px;
+    text-align: center;
+    margin-right: 15px;
+    font-size: 20px;
+  }
+/* 브라우저 / 모바일 환경에서 화면을 축소하거나 확대했을때  */
+/* media query 문법이라 함  */
+/* 해당 옵션은 현재 브라우저 폭이 1200px 이하인 경우 아래 옵션을 적용시킨다. */
+/* 여러개 사용해도 됨 큰거 작은 순으로  */
+/* breakpoint 기준의 px은 다른사람이 많이쓰는 것을 따라하는걸 권장함  */
+/* only 옛날 익스플로어 호환을 위한 옵션 */
+/* print 인쇄화면에서 나올 class 지정  */
+@media screen and (max-width: 1200px){
+    .flex-container{ 
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        height: 100%;
+        align-items: center;
+        background-color: coral;
+        padding: 10px;
+    }
+    .flex-item{
+      font-size: 15px;
+    }
+}
+@media screen and (max-width: 768px){
+    .flex-container{ 
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        background-color: coral;
+        place-items: center;
+        padding: 10px;
+    }
+    .flex-item{
+        font-size: 15px;
+        text-align: center;
+        margin-right: 15px;
+      }
+}
+@media screen and (max-width: 576px){
+    .flex-container{ 
+        display: flex;
+        flex-direction: column;
+        background-color: coral;
+        align-items: center;
+        padding: 10px;
+    }
+    .flex-item{
+        font-size: 15px;
+        text-align: center;
+        margin-right: 15px;
+    }
+} 
+  
