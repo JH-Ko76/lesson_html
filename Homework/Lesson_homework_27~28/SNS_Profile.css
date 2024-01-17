@@ -1,0 +1,286 @@
+button{
+    border-radius: 5px;
+    width: 110px;
+    height: 40px;
+    background-color: #6fbaf8;
+    color: white;
+    border-color: white;
+    margin: 10px;
+}
+h3{
+    font-weight: bold;
+}
+span{
+    display:inline-block;
+}
+
+i{
+    color: #6fbaf8;
+}
+
+/* 메인 백그라운드 설정 */
+.gray-bg{
+    background-color: #f7f9fc;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+}
+/* work box 설정 */
+.work_view{
+    background-color: white;
+    width: 230px;
+    height: 400px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+/* sign box 설정 */
+.sign_view{
+    background-color: white;
+    width: 250px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
+/* about & skil box 설정 */
+.about_view{
+    background-color: white;
+    border-radius: 5px;
+    width: 600px;
+    height: 550px;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+/* find box 설정 */
+.find_view{
+    text-align: center;
+}
+/* tab 메뉴 박스 설정 */
+.blueLine{
+    border-bottom:3px solid #6fbaf8;
+    width: 100px;
+    text-align: center;
+}
+/* 세로줄 */
+.Vr_crossline{
+    padding-left: 100px;
+    padding-right: 50px;
+    height: 200px;
+}
+/* Profile box 설정 */
+.Profile_view{
+    background-color: white;
+    box-shadow: 5px gray;
+    width: 100%;
+    max-width: 1100px;
+    height: 250px;
+    margin-left: auto; 
+    margin-right: auto;
+    display: block;
+    border-radius: 5px;
+}
+/* flex 컨테이너 속성 */
+.flex-container{
+  display: flex;
+
+}
+/* flex item 크기 지정 */
+.flex-item{
+     width: 200px;
+} 
+
+/* 블루 컬러 텍스트 색상용 */
+.info_text{
+    color: rgb(23, 149, 233);
+}
+/* 타이틀 텍스트 정렬 */
+.title_box{
+    padding: 30px;
+}
+/* 설명용 텍스트 정렬 */
+.explain_box{
+    margin-top: -40px;
+    padding: 30px;
+    line-height: -100px;
+    font-size: 13px;
+}
+/* 추천친구 정렬 */
+.freand-box {
+    margin-top: -30px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+/* 텝 메뉴 정렬 */
+.tab_manu{
+    margin-top: 80px;
+    max-width: 1200px;
+}
+/* 가로 구분선 속성 */
+.mid_line{
+    width : 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.badge{
+    color:black;
+    width: 75px;
+    height: 25px;
+    border-radius: 15px;
+    border-color: #eee;
+    border-style: solid;
+}
+.find_box{
+    flex-direction: column;
+}
+
+@media screen and (max-width : 1200px) {
+
+    .Profile_view{
+        background-color: white;
+        box-shadow: 5px gray;
+        width: 100%;
+        max-width: 500px;
+        height: 100%;
+        max-height: 1000px;
+        border-radius: 5px;
+        margin-left: -5px;
+    }
+    .Vr_crossline{
+        height: 0px;
+        color: white;
+        padding: 20px;
+    }
+    /* work box 설정 */
+    .work_view{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+    }
+    /* sign box 설정 */
+    .sign_view{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-left: -2px;
+    }
+    /* about & skil box 설정 */
+    .about_view{
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+    height: 400px;
+    margin-left: -2px;
+    margin-top: 10px;
+    }
+    /* find box 설정 */
+    .find_box{
+        margin-left: -50px;
+        width: 550px;
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width : 768px) {
+    .Profile_view{
+        background-color: white;
+        box-shadow: 5px gray;
+        width: 100%;
+        max-width: 600px;
+        height: 100%;
+        max-height: 1000px;
+        border-radius: 5px;
+    }
+    .Vr_crossline{
+        height: 0px;
+        color: white;
+        padding: 20px;
+    }
+    /* work box 설정 */
+    .work_view{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border-radius: 5px;
+    margin-top: 10px;
+    }
+    /* sign box 설정 */
+    .sign_view{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 5px;
+    text-align: center;
+    }
+    /* about & skil box 설정 */
+    .about_view{
+    background-color: white;
+    border-radius: 5px;
+    width: 500px;
+    height: 400px;
+    margin-left: 30px;
+    margin-top: 10px;
+    }
+    .find_box{
+        margin-left: -50px;
+        width: 550px;
+        flex-direction: column;
+    }
+
+@media screen and (max-width : 576px) {
+        .Profile_view{
+            background-color: white;
+            box-shadow: 5px gray;
+            width: 100%;
+            max-width: 600px;
+            height: 100%;
+            max-height: 1000px;
+            border-radius: 5px;
+        }
+        .Vr_crossline{
+            height: 0px;
+            color: white;
+            padding: 20px;
+        }
+        /* work box 설정 */
+        .work_view{
+        background-color: white;
+        width: 500px;
+        height: 300px;
+        border-radius: 5px;
+        margin-top: 10px;
+        }
+        /* sign box 설정 */
+        .sign_view{
+        background-color: white;
+        width: 500px;
+        height: 300px;
+        margin-top: 10px;
+        margin-left: 30px;
+        border-radius: 5px;
+        text-align: center;
+        }
+        /* about & skil box 설정 */
+        .about_view{
+        background-color: white;
+        border-radius: 5px;
+        width: 500px;
+        height: 400px;
+        margin-left: 30px;
+        margin-top: 10px;
+        }
+        .find_box{
+            margin-left: -50px;
+            width: 550px;
+            flex-direction: column;
+        }
+}
