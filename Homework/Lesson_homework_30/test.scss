@@ -1,0 +1,143 @@
+// 다른 파일에서 가져오는 use문법
+//  $변수 생성 
+$main_color : blue;
+
+//사칙연산도 가능 하지만 %는 안됨
+$defalt_size:20px;
+
+/*일반문법
+.main-bg h4{
+    font-size: 16px;
+}
+*/
+
+//문제1
+//nesting 문법
+.main-list{
+    ul{
+        display: block;
+    }
+    li{
+        padding: 5px;
+        list-style: none;
+        width: 300px;
+        height: 50px;
+        border: 1px;
+        border-color: black;
+        border-style: solid;
+    }
+    .active:hover{
+        background-color: skyblue;
+        color: white;
+    }
+}
+
+//@extend 문법
+//클래스 전체를 복사하는문법
+// 문2 extend 문법 박스 
+// alert box 3개 디자인
+//임시 클래스 명(extend) % .
+%div{
+    width:100%;
+    max-width: 800px;
+    height: 50px;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+}
+.alert-box{
+    display: block;
+}
+
+.div-green{
+    //기존의 코드를 복사해 이용하는게 extend문법
+    @extend %div;
+    background-color:rgb(165, 231, 165);
+    color:green;
+}
+
+.div-blue{
+    @extend %div;
+    background-color:rgb(163, 193, 215);
+    color:rgb(22, 98, 229);
+}
+
+.div-yellow{
+    @extend %div;
+    background-color:rgb(240, 240, 219);
+    color:rgb(207, 158, 12);
+}
+// 다른 파일에서 가져오는 use문법
+//@use 'reset';
+
+
+.container{
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    background-color: plum;
+    display: block;
+    height: 100%;
+    max-height: 100px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+
+
+// @mixin문법
+// sass 문법으로 축약
+@mixin font-style($구멍, $구멍2){
+    font-size: $구멍;
+    #{$구멍2}: -1px;
+}
+@mixin box-style($구멍, $구멍2){
+    width: $구멍;
+    height:$구멍2;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+// 응용문제 Sass 반복문을 이용해서 1~12생성
+@for $i from 1 to 12{
+    .col-#{13-$i}{
+        @include box-style((100%)/$i,20px);
+        //다른파일 변수가져다 쓰기 
+        // color:reset.$메인칼라;
+        //mixin도 마찬가지 @include 파일명.mixin이름;
+    }
+}
+
+// 응용문제 col-md-6 구현하기
+
+// md col-6 
+//@use 'media';
+@import "./media.scss";
+
+@include mobile{
+        .col-13{
+            width: 60%;
+            height: 20px;
+    }
+}
+
+/*
+.col-6{
+    @include box-style(50%,20px);
+    //다른파일 변수가져다 쓰기 
+    // color:reset.$메인칼라;
+    //mixin도 마찬가지 @include 파일명.mixin이름;
+}
+.col-4{
+    @include box-style(33.33%,20px);
+}
+.col-3{
+    @include box-style(25%,20px);
+}
+*/
+
+.background {
+    background-color: $main_color;
+    font-size: $defalt_size - 2px;
+}
+
