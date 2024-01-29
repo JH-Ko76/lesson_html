@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.btn, .btn-yellow, .btn-red, .btn-green {
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+}
+
+.div, .div-yellow, .div-red, .div-green {
+  width: 200px;
+  height: 200px;
+  padding: 20px;
+}
+
+/*일반문법
+.main-bg h4{
+    font-size: 16px;
+}
+*/
+.maig-bg h4 {
+  font-size: 16px;
+}
+.maig-bg button {
+  color: red;
+}
+
+.btn-green {
+  color: green;
+}
+
+.btn-red {
+  color: red;
+}
+
+.btn-yellow {
+  color: yellow;
+}
+
+.div-green {
+  color: green;
+}
+
+.div-red {
+  color: red;
+}
+
+.div-yellow {
+  color: yellow;
+}
+
+h2 {
+  font-size: 40px;
+  letter-spacing: -1px;
+}
+
+h3 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+
+h4 {
+  font-size: 20px;
+  width: -1px;
+}
+
+.background {
+  background-color: blue;
+  font-size: 18px;
+}/*# sourceMappingURL=test.css.map */

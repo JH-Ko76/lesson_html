@@ -1,0 +1,90 @@
+//  $변수 생성 
+$main_color : blue;
+
+//사칙연산도 가능 하지만 %는 안됨
+$defalt_size:20px;
+
+//임시 클래스 명(extend) % .
+.btn {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+}
+.div{
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+}
+/*일반문법
+.main-bg h4{
+    font-size: 16px;
+}
+*/
+//nesting 문법
+.maig-bg{
+    h4{
+        font-size: 16px;
+    }
+    button{
+        color:red;
+    }
+}
+//@extend 문법
+//클래스 전체를 복사하는문법
+.btn-green{
+    @extend .btn;
+    color:green;
+}
+
+.btn-red{
+    @extend .btn;
+    color:red;
+}
+
+.btn-yellow{
+    @extend .btn;
+    color:yellow;
+}
+.div-green{
+    @extend .div;
+    color:green;
+}
+
+.div-red{
+    @extend .div;
+    color:red;
+}
+
+.div-yellow{
+    @extend .div;
+    color:yellow;
+}
+// 다른 파일에서 가져오는 use문법
+@use 'reset.scss';
+
+// @mixin문법
+// sass 문법으로 축약
+@mixin font-style($구멍, $구멍2){
+    font-size: $구멍;
+    #{$구멍2}: -1px;
+}
+
+h2{
+    @include font-style(40px,letter-spacing);
+    //다른파일 변수가져다 쓰기 
+    color:reset.$메인칼라;
+    //mixin도 마찬가지 @include 파일명.mixin이름;
+}
+h3{
+    @include font-style(30px,letter-spacing);
+}
+h4{
+    @include font-style(20px,width);
+}
+
+
+.background {
+    background-color: $main_color;
+    font-size: $defalt_size - 2px;
+}
+
